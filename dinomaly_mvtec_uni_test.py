@@ -303,7 +303,7 @@ def test(item_list, image_size):
         #         np.mean(auroc_sp_list), np.mean(ap_sp_list), np.mean(f1_sp_list),
         #         np.mean(auroc_px_list), np.mean(ap_px_list), np.mean(f1_px_list), np.mean(aupro_px_list)))
 
-        visualize(model, test_dataloader, device, save_path=f'{args.save_dir}')
+        visualize(model, test_dataloader, item, device, save_path=f'{args.save_dir}')
 
     return
 

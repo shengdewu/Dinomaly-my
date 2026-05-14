@@ -572,7 +572,7 @@ def visualize(model, dataloader, item, device, save_path='save', max_ratio=0.01)
                 cv2.imwrite(save_dir + '/' + name + '_heat.png', show)
                 results.append((name, fake, label[i], max_anomal))
 
-    with open(f'{save_dir}/item-result.csv', mode='w') as f:
+    with open(f'{save_dir}/{item}-result.csv', mode='w') as f:
         f.write('name,fake,label,max_anomal\n')
         for name, fake, label, max_anomal in results:
             f.write(f'{name},{fake:.3f},{label},{max_anomal:.3f}\n')
